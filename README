@@ -1,0 +1,94 @@
+# CloudQATest
+
+A .NET test automation project using Selenium WebDriver and NUnit for web application testing.
+
+## Project Overview
+
+This project provides automated testing capabilities for web applications using Selenium WebDriver with NUnit as the testing framework. The project includes robust form testing functionality.
+
+## Technology Stack
+
+- **.NET 9.0** - Target framework
+- **NUnit 4.2.2** - Testing framework
+- **Selenium WebDriver 4.26.1** - Browser automation
+- **DotNetSeleniumExtras.WaitHelpers 3.11.0** - Enhanced wait conditions
+- **Microsoft.NET.Test.Sdk 17.11.1** - Test SDK
+- **NUnit3TestAdapter 4.6.0** - Test adapter for running NUnit tests
+
+## Project Structure
+
+```
+CloudQATest/
+├── CloudQATest.csproj          # Project configuration file
+├── RobustFormTest.cs           # Test implementation for form testing
+├── bin/                        # Build output directory
+│   └── Debug/
+│       ├── net8.0/            # .NET 8.0 build artifacts
+│       └── net9.0/            # .NET 9.0 build artifacts
+└── obj/                        # Intermediate build files
+```
+
+## Prerequisites
+
+- [.NET 9.0 SDK](https://dotnet.microsoft.com/download/dotnet/9.0) or later
+- Compatible web browser (Chrome, Firefox, Edge, etc.)
+- Selenium WebDriver for your chosen browser
+
+## Getting Started
+
+### Building the Project
+
+```bash
+dotnet build
+```
+
+### Running Tests
+
+Run all tests:
+```bash
+dotnet test
+```
+
+Run tests with verbose output:
+```bash
+dotnet test --logger "console;verbosity=detailed"
+```
+
+### Restoring Dependencies
+
+```bash
+dotnet restore
+```
+
+## Test Files
+
+- **RobustFormTest.cs** - Contains automated tests for form validation and interaction
+
+## Configuration
+
+The project is configured in `CloudQATest.csproj` with the following settings:
+
+- **Target Framework**: .NET 9.0
+- **Implicit Usings**: Enabled
+- **Nullable Reference Types**: Enabled
+- **Packable**: False (test project)
+
+## Dependencies
+
+All NuGet packages are managed through the `CloudQATest.csproj` file. Package versions are regularly updated to maintain compatibility and security.
+
+## Contributing
+
+When adding new tests:
+1. Follow the existing test structure in `RobustFormTest.cs`
+2. Use NUnit attributes for test organization
+3. Implement proper wait conditions using `DotNetSeleniumExtras.WaitHelpers`
+4. Ensure tests are independent and can run in any order
+
+## License
+
+*Add your license information here*
+
+## Contact
+
+*Add contact information or team details here*
